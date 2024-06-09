@@ -1,0 +1,117 @@
+class Chopstick:
+    state: String  // 筷子的状态
+
+    method pickUp():  // 拿起筷子的方法
+        set state to "in use"  // 将状态设为“使用中”
+
+    method putDown():  // 放下筷子的方法
+        set state to "available"  // 将状态设为“可用”
+
+class Philosopher:
+    id: int  // 哲学家的编号
+    leftChopstick: Chopstick  // 左边的筷子
+    rightChopstick: Chopstick  // 右边的筷子
+    diningTable: DiningTable  // 餐桌
+
+    method run():  // 哲学家线程运行方法
+        while not diningTable.isStopped:  // 如果餐桌没有停止
+            think()  // 哲学家思考
+            tryToEat()  // 尝试进餐
+
+    method think():  // 思考的方法
+        sleep for a random time  // 随机思考一段时间
+
+    method tryToEat():  // 尝试进餐的方法
+        if diningTable.tryToPickChopsticks(id):  // 尝试拿筷子
+            eat()  // 开始进餐
+            diningTable.putDownChopsticks(id)  // 放下筷子
+
+    method eat():  // 进餐的方法
+        sleep for a random time  // 随机进餐一段时间
+
+class DiningTable:
+    chopsticks: list of Chopstick  // 筷子列表
+    philosophers: list of Philosopher  // 哲学家列表
+    strategy: int  // 选择的策略
+    isStopped: boolean  // 餐桌是否停止
+
+    constructor DiningTable(strategy: int):  // 餐桌的构造方法
+        initialize chopsticks  // 初始化筷子
+        initialize philosophers  // 初始化哲学家
+        set strategy  // 设置策略
+
+    method startDining():  // 开始进餐的方法
+        start philosopher threads  // 启动哲学家线程
+
+    method stopDining():  // 停止进餐的方法
+        set isStopped to true  // 设置餐桌为停止状态
+        stop philosopher threads  // 停止哲学家线程
+
+    method tryToPickChopsticks(philosopherId: int) -> boolean:  // 尝试拿筷子的方法
+        if strategy == 1:
+            return tryBasicStrategy(philosopherId)  // 使用策略1
+        if strategy == 2:
+            return tryLimitedStrategy(philosopherId)  // 使用策略2
+        if strategy == 3:
+            return tryOddEvenStrategy(philosopherId)  // 使用策略3
+        if strategy == 4:
+            return trySynchronizedStrategy(philosopherId)  // 使用策略4
+
+    method putDownChopsticks(philosopherId: int):  // 放下筷子的方法
+        release chopsticks  // 释放筷子
+
+class DiningPhilosophersAnimeGUI:
+    diningTable: DiningTable  // 餐桌
+
+    constructor DiningPhilosophersAnimeGUI(diningTable: DiningTable):  // GUI的构造方法
+        initialize GUI components  // 初始化GUI组件
+
+    method run():  // 运行GUI的方法
+        while not diningTable.isStopped:  // 如果餐桌没有停止
+            updateGUI()  // 更新GUI
+
+    method updateGUI():  // 更新GUI的方法
+        update philosopher and chopstick states in GUI  // 更新哲学家和筷子的状态
+
+    method stop():  // 停止GUI的方法
+        stop GUI updates  // 停止GUI更新
+
+class manu:
+    frame: JFrame  // 主窗口
+    gui: DiningPhilosophersAnimeGUI  // GUI
+    currentDiningTable: DiningTable  // 当前餐桌
+    menu: JMenu  // 菜单
+    introPanel: JPanel  // 介绍面板
+
+    constructor manu():  // 构造方法
+        create JFrame  // 创建主窗口
+        set default close operation  // 设置默认关闭操作
+        set size and location  // 设置窗口大小和位置
+        load and set icon  // 加载并设置图标
+        create and setup introPanel  // 创建并设置介绍面板
+        create and add introLabel to introPanel  // 创建并添加介绍标签
+        add introPanel to frame  // 将介绍面板添加到窗口
+        create JMenuBar  // 创建菜单栏
+        create JMenu and add to JMenuBar  // 创建菜单并添加到菜单栏
+        create exit menu item and add action listener  // 创建退出菜单项并添加事件监听
+        add exit menu item to JMenuBar  // 将退出菜单项添加到菜单栏
+        set JMenuBar to frame  // 设置菜单栏到窗口
+        create menu items for each strategy  // 为每个策略创建菜单项
+        add action listeners to menu items  // 为菜单项添加事件监听
+        make frame visible  // 使窗口可见
+
+    method initializeGUI(strategy: int):  // 初始化GUI的方法
+        if gui is not null:
+            gui.stop()  // 停止当前GUI及其相关线程
+            remove gui from frame  // 从窗口移除GUI
+
+        if currentDiningTable is not null:
+            currentDiningTable.stopDining()  // 停止所有哲学家线程
+
+        create new DiningTable with strategy  // 创建新的餐桌
+        create new DiningPhilosophersAnimeGUI with diningTable  // 创建新的GUI
+        add gui to frame  // 将GUI添加到窗口
+        start GUI update thread  // 启动GUI更新线程
+
+    method main():  // 主方法
+        invoke SwingUtilities with manu constructor  // 使用构造方法调用SwingUtilities
