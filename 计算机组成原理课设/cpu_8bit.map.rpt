@@ -1,0 +1,223 @@
+Analysis & Synthesis report for cpu_8bit
+Sun Jun 09 23:50:15 2024
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                             ;
++-------------------------------+------------------------------------------+
+; Analysis & Synthesis Status   ; Failed - Sun Jun 09 23:50:15 2024        ;
+; Quartus II Version            ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name                 ; cpu_8bit                                 ;
+; Top-level Entity Name         ; cpu_8bit                                 ;
+; Family                        ; Stratix II                               ;
+; Logic utilization             ; N/A until Partition Merge                ;
+;     Combinational ALUTs       ; N/A until Partition Merge                ;
+;     Dedicated logic registers ; N/A until Partition Merge                ;
+; Total registers               ; N/A until Partition Merge                ;
+; Total pins                    ; N/A until Partition Merge                ;
+; Total virtual pins            ; N/A until Partition Merge                ;
+; Total block memory bits       ; N/A until Partition Merge                ;
+; DSP block 9-bit elements      ; N/A until Partition Merge                ;
+; Total PLLs                    ; N/A until Partition Merge                ;
+; Total DLLs                    ; N/A until Partition Merge                ;
++-------------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                          ; cpu_8bit           ; cpu_8bit           ;
+; Family name                                                    ; Stratix II         ; Stratix II         ;
+; Use Generated Physical Constraints File                        ; Off                ;                    ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; DSP Block Balancing                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto DSP Block Replacement                                     ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM Block Balancing                                       ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Timing-Driven Synthesis                                        ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                    ; Off                ; Off                ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; SDC constraint protection                                      ; Off                ; Off                ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Sun Jun 09 23:50:15 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu_8bit -c cpu_8bit
+Info: Found 2 design units, including 1 entities, in source file ar.vhd
+    Info: Found design unit 1: ar-behave
+    Info: Found entity 1: ar
+Info: Found 2 design units, including 1 entities, in source file bus_dir.vhd
+    Info: Found design unit 1: bus_dir-behave
+    Info: Found entity 1: bus_dir
+Info: Found 2 design units, including 1 entities, in source file bus_mux.vhd
+    Info: Found design unit 1: bus_mux-behave
+    Info: Found entity 1: bus_mux
+Info: Found 2 design units, including 1 entities, in source file flag_reg.vhd
+    Info: Found design unit 1: flag_reg-behave
+    Info: Found entity 1: flag_reg
+Info: Found 2 design units, including 1 entities, in source file ir.vhd
+    Info: Found design unit 1: ir-behave
+    Info: Found entity 1: ir
+Info: Found 2 design units, including 1 entities, in source file pc.vhd
+    Info: Found design unit 1: pc-behave
+    Info: Found entity 1: pc
+Info: Found 2 design units, including 1 entities, in source file reg.vhd
+    Info: Found design unit 1: reg-behave
+    Info: Found entity 1: reg
+Info: Found 2 design units, including 1 entities, in source file reg_mux.vhd
+    Info: Found design unit 1: reg_mux-behave
+    Info: Found entity 1: reg_mux
+Info: Found 2 design units, including 1 entities, in source file reg_out.vhd
+    Info: Found design unit 1: reg_out-behave
+    Info: Found entity 1: reg_out
+Info: Found 2 design units, including 1 entities, in source file reg_test.vhd
+    Info: Found design unit 1: reg_test-behave
+    Info: Found entity 1: reg_test
+Info: Found 2 design units, including 1 entities, in source file t2.vhd
+    Info: Found design unit 1: t2-behave
+    Info: Found entity 1: t2
+Info: Found 2 design units, including 1 entities, in source file t3.vhd
+    Info: Found design unit 1: t3-behave
+    Info: Found entity 1: t3
+Info: Found 2 design units, including 1 entities, in source file t1.vhd
+    Info: Found design unit 1: t1-behave
+    Info: Found entity 1: t1
+Info: Found 2 design units, including 1 entities, in source file reg_testa.vhd
+    Info: Found design unit 1: reg_testa-behave
+    Info: Found entity 1: reg_testa
+Info: Found 1 design units, including 1 entities, in source file cpu_8bit.bdf
+    Info: Found entity 1: cpu_8bit
+Info: Found 2 design units, including 1 entities, in source file controller.vhd
+    Info: Found design unit 1: controller-behave
+    Info: Found entity 1: controller
+Info: Found 2 design units, including 1 entities, in source file timer.vhd
+    Info: Found design unit 1: timer-behave
+    Info: Found entity 1: timer
+Info: Found 2 design units, including 1 entities, in source file alu.vhd
+    Info: Found design unit 1: alu-behave
+    Info: Found entity 1: alu
+Info: Found 2 design units, including 1 entities, in source file adder_8bit.vhd
+    Info: Found design unit 1: adder_8bit-behave
+    Info: Found entity 1: adder_8bit
+Info: Found 2 design units, including 1 entities, in source file rom.vhd
+    Info: Found design unit 1: rom-behavior
+    Info: Found entity 1: rom
+Info: Found 2 design units, including 1 entities, in source file dram.vhd
+    Info: Found design unit 1: dram-behavior
+    Info: Found entity 1: dram
+Warning: Can't analyze file -- file D:/WorkTable/学习/课程设计/计算机组成原理/小组3综合性实验/（20240609）cpu_8_bit/计算机组成原理课设/alu_test.vhd is missing
+Info: Found 2 design units, including 1 entities, in source file multiplier_8bit.vhd
+    Info: Found design unit 1: multiplier_8bit-behave
+    Info: Found entity 1: multiplier_8bit
+Info: Found 2 design units, including 1 entities, in source file reg_set.vhd
+    Info: Found design unit 1: reg_set-behave
+    Info: Found entity 1: reg_set
+Info: Found 2 design units, including 1 entities, in source file mdr.vhd
+    Info: Found design unit 1: mdr-behave
+    Info: Found entity 1: mdr
+Info: Elaborating entity "cpu_8bit" for the top level hierarchy
+Error: Logic function of type ir and instance "ir" is already defined as a signal name or another logic function
+Error: Logic function of type reg_out and instance "reg_out" is already defined as a signal name or another logic function
+Error: Logic function of type timer and instance "timer" is already defined as a signal name or another logic function
+Error: Can't elaborate top-level user hierarchy
+Error: Quartus II Analysis & Synthesis was unsuccessful. 4 errors, 1 warning
+    Error: Peak virtual memory: 246 megabytes
+    Error: Processing ended: Sun Jun 09 23:50:15 2024
+    Error: Elapsed time: 00:00:00
+    Error: Total CPU time (on all processors): 00:00:00
+
+
