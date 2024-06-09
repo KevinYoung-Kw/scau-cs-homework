@@ -1,0 +1,5 @@
+﻿  auction.cpp
+C:\Users\m1354\Desktop\Sastis\物品竞拍管理\auction.cpp(300,50): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\m1354\Desktop\Sastis\物品竞拍管理\auction.cpp(321,50): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\m1354\Desktop\Sastis\物品竞拍管理\auction.cpp(341,24): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+  物品竞拍管理.vcxproj -> C:\Users\m1354\Desktop\Sastis\物品竞拍管理\x64\Debug\物品竞拍管理.exe

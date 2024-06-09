@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "物品竞拍管理", "物品竞拍管理.vcxproj", "{395EC41C-9C09-48C6-AA88-471AECE9F861}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{395EC41C-9C09-48C6-AA88-471AECE9F861}.Debug|x64.ActiveCfg = Debug|x64
+		{395EC41C-9C09-48C6-AA88-471AECE9F861}.Debug|x64.Build.0 = Debug|x64
+		{395EC41C-9C09-48C6-AA88-471AECE9F861}.Debug|x86.ActiveCfg = Debug|Win32
+		{395EC41C-9C09-48C6-AA88-471AECE9F861}.Debug|x86.Build.0 = Debug|Win32
+		{395EC41C-9C09-48C6-AA88-471AECE9F861}.Release|x64.ActiveCfg = Release|x64
+		{395EC41C-9C09-48C6-AA88-471AECE9F861}.Release|x64.Build.0 = Release|x64
+		{395EC41C-9C09-48C6-AA88-471AECE9F861}.Release|x86.ActiveCfg = Release|Win32
+		{395EC41C-9C09-48C6-AA88-471AECE9F861}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E83B692-58F8-4E9C-9077-1823046588D3}
+	EndGlobalSection
+EndGlobal
